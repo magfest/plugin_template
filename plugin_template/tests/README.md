@@ -1,6 +1,6 @@
 # Running Tests
 
-RAMS plugins require Python 3.4.
+Ubersystem plugins require Python 3.4.
 
 
 ## Using tox
@@ -13,17 +13,17 @@ Installing tox:
 pip install tox
 ```
 
-To run all tests and pep8 validation from the command line:
+To run all tests and pycodestyle validation from the command line:
 ```
 tox
 ```
 
-To run pep8 validation only, without running any tests:
+To run pycodestyle validation only, without running any tests:
 ```
-tox -e pep8
+tox -e pycodestyle
 ```
 
-To run the tests only, without pep8:
+To run the tests only, without pycodestyle:
 ```
 tox -e py34
 ```
