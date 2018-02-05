@@ -1,19 +1,19 @@
-# RAMS Plugin Template
+# Ubersystem Plugin Template
 This skeleton repository is intended to help developers when creating a new plugin.
 
 
 ## How do I use this template?
-1. Clone this repository into the same directory as the "rams" plugin and any other Sideboard plugins you have installed.
+1. Clone this repository into the same directory as the "uber" plugin and any other Sideboard plugins you have installed.
 2. Rename the plugin. Be sure to change the name everywhere it says `plugin_template` (including directory names). Plugin names should be separated_by_underscore.
 3. Begin development!
 
 ## What can I do with this template?
-RAMS plugins fall into two broad categories:
+Ubersystem plugins fall into two broad categories:
 1. **Event plugins** or event-specific plugins are used to implement any business logic specific to your event. These plugins often make heavy use of _template overrides_ to change text or hide fields on the pre-registration pages, plus _model mixins_ to add new fields to, e.g., the Attendee model and _validations_ for those new fields.
 2. **Feature plugins** add entirely new functionality intended for use by any event. These plugins often add entirely new _site sections_ with their own templates, plus new model classes.
 
 ### Template overrides
-Templates in RAMS plugins can _override_ templates in other plugins. The plugin that is loaded last will take precedence -- for this reason, the RAMS core plugin is loaded first by default.
+Templates in Ubersystem plugins can _override_ templates in other plugins. The plugin that is loaded last will take precedence -- for this reason, the Ubersystem core plugin is loaded first by default.
 
 We recommend you use template overrides sparingly. The templating system is in the midst of being changed, and these techniques will (hopefully soon) become out of date. However, in the meantime, most of your template overriding will likely be done in `templates/regextra.html`. This template is included on every page that involves viewing or editing attendee details, including the pre-registration page. A very simple example of some things you might want to do in this page:
 ```html
@@ -48,7 +48,7 @@ class Attendee:
     @property
     def new_property(self):
         # A new property you want to add to the Attendee class
-    
+
     @presave_adjustment
     def alter_newfield(self):
         # You can also add new 'presave adjustments' to work with your new field
